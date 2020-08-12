@@ -56,6 +56,15 @@ StringIntMap makeWordCounts(const StringVec& words) {
   // =================================================
   // EXERCISE 1 WORKSPACE: YOUR CODE HERE
   // =================================================
+  for (auto i=words.begin(); i!=words.end(); i++) {
+    int counter = 0;
+    for (auto j=words.begin(); j!=words.end(); j++ ) {
+      if (*i==*j) {
+        counter += 1;
+      }
+    }
+    wordcount_map[*i] = counter;
+  }
 
   return wordcount_map;
 }
